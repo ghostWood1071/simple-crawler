@@ -1,0 +1,18 @@
+[
+    {
+        "name": "goto",
+        "params": {
+            "link": "https://finance.vietstock.vn/doanh-nghiep-a-z?page=1",
+            "delay": 5
+        }
+    },
+    {
+        "name": "get_table",
+        "params":{
+            "tbl_name": "stock",
+            "header": "thead tr th:not([class]), th.text-center",
+            "row": "table.table tbody tr",
+            "cell": "td"
+        }   
+    }
+]
