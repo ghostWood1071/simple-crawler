@@ -1,4 +1,5 @@
-from crawler import Crawler
+from crawler.playwright_crawler import Crawler
+from crawler.request_crawler import RequestCrawler
 import json
 
 def read_config(path:str):
@@ -8,10 +9,10 @@ def read_config(path:str):
 
 def run(pipeline_name):
     config = read_config(f"./config/{pipeline_name}")
-    crawler = Crawler(config)
+    crawler = RequestCrawler(config["pipeline"])
     data = crawler.run()
     print(data)
     
     
 if __name__ == "__main__":
-    run("vnstock.json")
+    run("cafef.json")
