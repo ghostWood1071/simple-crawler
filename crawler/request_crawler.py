@@ -6,6 +6,7 @@ import time
 from util import data_util
 import copy
 from error.page_end_error import PageEndError
+from transform.transform import Transform
 
 class RequestCrawler():
     def __init__(self, pipeline):
@@ -36,8 +37,15 @@ class RequestCrawler():
             traceback.print_exc()
     
     def save(self, input_val, **kwargs):
-        Sink(kwargs.get("type"), input_val, **kwargs).execute()
+        result = Sink(kwargs.get("type"), input_val, **kwargs).execute()
+        return result
     
+    def clear_sink(self, input_val, **kwargs):
+        Sink(kwargs.get("type"), input_val, **kwargs).clear()
+    
+    def transform(self, input_val, **kwargs):
+        return Transform(input_val, **kwargs).process()
+
     def foreach(self, input_val, **kwargs):
         iterator = []
         if isinstance(input_val, list):

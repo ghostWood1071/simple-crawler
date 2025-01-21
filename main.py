@@ -15,7 +15,8 @@ def run(pipeline_name):
     
     
 if __name__ == "__main__":
-    path = "./config/generator/result/"
+    # path = "./config/generator/result/"
+    path = "./config/generator/template/"
     files = os.listdir(path)
     i = 1
     for file in files:
