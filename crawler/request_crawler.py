@@ -5,6 +5,7 @@ import json
 import time
 from util import data_util
 import copy
+from error.page_end_error import PageEndError
 
 class RequestCrawler():
     def __init__(self, pipeline):
@@ -27,8 +28,10 @@ class RequestCrawler():
             if kwargs.get("cond"):
                 expr = kwargs["cond"]["validate"]
                 if eval(expr):
-                    exit()
+                    raise PageEndError(f"done")
             return result
+        except PageEndError as e:
+            raise e
         except Exception as e:
             traceback.print_exc()
     
@@ -60,6 +63,8 @@ class RequestCrawler():
                         if kwargs["cond"]["action"] == action.get("name"):
                             params["cond"] = kwargs["cond"]
                     tmp_val = getattr(self,action.get("name"))(tmp_val, **params)
+                except PageEndError as e:
+                    raise e
                 except Exception as e:
                     traceback.print_exc()
             if kwargs.get("delay"):
