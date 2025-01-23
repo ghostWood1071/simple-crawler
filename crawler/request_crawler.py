@@ -7,6 +7,7 @@ from util import data_util
 import copy
 from error.page_end_error import PageEndError
 from transform.transform import Transform
+from service.HTMLToJson import HTMLToJson as HTML
 
 class RequestCrawler():
     def __init__(self, pipeline):
@@ -25,7 +26,9 @@ class RequestCrawler():
             if kwargs.get("format"):
                 result = response.__getattribute__(kwargs.get("format"))()
             else:
-                result = response.raw
+                html_content = response.text
+                process = HTML(html_content)
+                result = process.ConvertToJson()
             if kwargs.get("cond"):
                 expr = kwargs["cond"]["validate"]
                 if eval(expr):

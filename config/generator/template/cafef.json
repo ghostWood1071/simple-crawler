@@ -9,7 +9,7 @@
                 "delay": 1,
                 "cond": {
                     "action": "get",
-                    "validate": "len(result[\"Data\"][\"Data\"])==0"
+                    "validate": "len(result)==0"
                 },
                 "actions": [
                     {
@@ -108,6 +108,30 @@
                             "type": "file",
                             "write_mode": "w",
                             "file_name": "HPG_YYYMMDD.json",
+                            "pattern": "YYYMMDD",
+                            "pattern_val": "#get_time_now@%Y%m%d%H%M%S"
+                        }
+                    },
+                    {
+                        "name": "get",
+                        "params": {
+                            "url": "https://cafef.vn/du-lieu//Ajax/Events_RelatedNews_New.aspx",
+                            "params": {
+                                "symbol":"HPG",
+                                "floorID":"0",
+                                "configID":"0",
+                                "PageIndex": "1",
+                                "PageSize":30,
+                                "Type": "2"
+                            }
+                        }
+                    },
+                    {
+                        "name": "save",
+                        "params": {
+                            "type": "file",
+                            "write_mode": "w",
+                            "file_name": "HPG_News_YYYMMDD.json",
                             "pattern": "YYYMMDD",
                             "pattern_val": "#get_time_now@%Y%m%d%H%M%S"
                         }

@@ -25,3 +25,17 @@ if __name__ == "__main__":
         except Exception as e:
             print(f"done {i}/{len(files)}")
             i+=1
+    # config = {}
+    # crawler = RequestCrawler(config)
+    # param = {
+    #             "url": "https://cafef.vn/du-lieu//Ajax/Events_RelatedNews_New.aspx",
+    #             "params": {
+    #                 "symbol":"HPG",
+    #                 "floorID":"0",
+    #                 "configID":"0",
+    #                 "PageIndex": "1",
+    #                 "PageSize":30,
+    #                 "Type": "2"
+    #             }
+    #         }
+    # print(crawler.get("test",**param))

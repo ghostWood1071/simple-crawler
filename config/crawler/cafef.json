@@ -29,9 +29,9 @@
                     {
                         "name": "save",
                         "params": {
-                            "type": "s3",
-                            "bucket": "cmc-datalab-data",
-                            "key": "HPG/HPG_YYYMMDD.json",
+                            "type": "file",
+                            "write_mode": "wb+",
+                            "file_name": "./simple-crawler/HPG_TEST/HPG_YYYMMDD.json",
                             "pattern": "YYYMMDD",
                             "pattern_val": "#get_time_now@%Y%m%d%H%M%S"
                         }
