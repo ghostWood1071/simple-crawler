@@ -5,7 +5,7 @@
             "name": "foreach",
             "params": {
                 "start": 1,
-                "limit": 2,
+                "limit": 5000,
                 "delay": 1,
                 "cond": {
                     "action": "get",
