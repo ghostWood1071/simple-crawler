@@ -9,15 +9,16 @@
                 "delay": 1,
                 "cond": {
                     "action": "get",
-                    "validate": "len(result[\"Data\"][\"Data\"])==0"
+                    "validate": "len(result['Data']['Data'])==0 and kwagrs.get('id')=='01'"
                 },
                 "actions": [
                     {
                         "name": "get",
                         "params": {
+                            "id": "01",
                             "url": "https://cafef.vn/du-lieu/Ajax/PageNew/DataHistory/PriceHistory.ashx",
                             "params": {
-                                "Symbol":"HPG",
+                                "Symbol":"{Ticker}",
                                 "StartDate":"01/01/2024",
                                 "EndDate":"01/01/2025",
                                 "PageIndex": "$item",
@@ -38,7 +39,7 @@
                         "params": {
                             "url": "https://cafef.vn/du-lieu/Ajax/PageNew/DataHistory/ThongKeDL.ashx",
                             "params": {
-                                "Symbol":"HPG",
+                                "Symbol":"{Ticker}",
                                 "StartDate":"01/01/2024",
                                 "EndDate":"01/01/2025",
                                 "PageIndex": "$item",
@@ -59,7 +60,7 @@
                         "params": {
                             "url": "https://cafef.vn/du-lieu/Ajax/PageNew/DataHistory/GDKhoiNgoai.ashx",
                             "params": {
-                                "Symbol":"HPG",
+                                "Symbol":"{Ticker}",
                                 "StartDate":"01/01/2024",
                                 "EndDate":"01/01/2025",
                                 "PageIndex": "$item",
@@ -80,7 +81,7 @@
                         "params": {
                             "url": "https://cafef.vn/du-lieu/Ajax/PageNew/DataHistory/GDTuDoanh.ashx",
                             "params": {
-                                "Symbol":"HPG",
+                                "Symbol":"{Ticker}",
                                 "StartDate":"01/01/2024",
                                 "EndDate":"01/01/2025",
                                 "PageIndex": "$item",
@@ -107,9 +108,15 @@
                         "params": {
                             "type": "file",
                             "write_mode": "w",
-                            "file_name": "HPG_YYYMMDD.json",
+                            "file_name": "{Ticker}/{Ticker}_YYYMMDD.json",
                             "pattern": "YYYMMDD",
                             "pattern_val": "#get_time_now@%Y%m%d%H%M%S"
+                        }
+                    },
+                    {
+                        "name": "clear_sink",
+                        "params":{
+                            "type": "memory"
                         }
                     }
                 ]
