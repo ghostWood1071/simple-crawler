@@ -1,0 +1,30 @@
+{
+    "StartAt": "FetchConfigs",
+    "States": {
+      "FetchConfigs": {
+        "Type": "Task",
+        "Resource": "arn:aws:lambda:us-east-1:123456789012:function:fetch_configs_lambda",
+        "Next": "ProcessConfig"
+      },
+      "ProcessConfig": {
+        "Type": "Task",
+        "Resource": "arn:aws:lambda:us-east-1:123456789012:function:process_config_lambda",
+        "Next": "CheckNextConfig"
+      },
+      "CheckNextConfig": {
+        "Type": "Choice",
+        "Choices": [
+          {
+            "Variable": "$.next_config_available",
+            "BooleanEquals": true,
+            "Next": "ProcessConfig"
+          }
+        ],
+        "Default": "Done"
+      },
+      "Done": {
+        "Type": "Succeed"
+      }
+    }
+  }
+  

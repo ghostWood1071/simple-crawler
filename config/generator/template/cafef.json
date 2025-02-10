@@ -1,20 +1,19 @@
 {
     "engine": "request-crawler",
+    "name": "{Ticker}",
+    "table": "price_history",
     "pipeline": [
         {
             "name": "foreach",
             "params": {
                 "start": 1,
-                "limit": 5000,
+                "limit": 1000,
                 "delay": 1,
-                "cond": {
-                    "action": "get",
-                    "validate": "len(result['Data']['Data'])==0 and kwagrs.get('id')=='01'"
-                },
                 "actions": [
                     {
-                        "name": "get",
+                        "name": "call_api",
                         "params": {
+                            "method": "get",
                             "id": "01",
                             "url": "https://cafef.vn/du-lieu/Ajax/PageNew/DataHistory/PriceHistory.ashx",
                             "params": {
@@ -35,8 +34,9 @@
                         }
                     },
                     {
-                        "name": "get",
+                        "name": "call_api",
                         "params": {
+                            "method": "get",
                             "url": "https://cafef.vn/du-lieu/Ajax/PageNew/DataHistory/ThongKeDL.ashx",
                             "params": {
                                 "Symbol":"{Ticker}",
@@ -56,8 +56,9 @@
                         }
                     },
                     {
-                        "name": "get",
+                        "name": "call_api",
                         "params": {
+                            "method": "get",
                             "url": "https://cafef.vn/du-lieu/Ajax/PageNew/DataHistory/GDKhoiNgoai.ashx",
                             "params": {
                                 "Symbol":"{Ticker}",
@@ -77,8 +78,9 @@
                         }
                     },
                     {
-                        "name": "get",
+                        "name": "call_api",
                         "params": {
+                            "method": "get",
                             "url": "https://cafef.vn/du-lieu/Ajax/PageNew/DataHistory/GDTuDoanh.ashx",
                             "params": {
                                 "Symbol":"{Ticker}",
@@ -106,9 +108,9 @@
                     {
                         "name": "save",
                         "params": {
-                            "type": "file",
-                            "write_mode": "w",
-                            "file_name": "{Ticker}/{Ticker}_YYYMMDD.json",
+                            "type": "s3",
+                            "bucket": "cmc-datalab-data",
+                            "key": "price_history/{Ticker}/{Ticker}_YYYMMDD.json",
                             "pattern": "YYYMMDD",
                             "pattern_val": "#get_time_now@%Y%m%d%H%M%S"
                         }
@@ -122,5 +124,6 @@
                 ]
             }
         }
-    ]
+    ],
+    "next": "{next_ticker}"
 }

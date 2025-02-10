@@ -1,0 +1,543 @@
+{
+    "data": [
+      {
+        "ReportNormId": 4302,
+        "ReportNormName": "A. TÀI SẢN",
+        "CssStyle": "MaxB",
+        "ParentReportNormID": 4302,
+        "CalculatedOrdering": 0
+      },
+      {
+        "ReportNormId": 4310,
+        "ReportNormName": "I. Tiền mặt, vàng bạc, đá quý",
+        "CssStyle": "NormalB",
+        "ParentReportNormID": 4375,
+        "CalculatedOrdering": 2
+      },
+      {
+        "ReportNormId": 4311,
+        "ReportNormName": "II. Tiền gửi tại NHNN",
+        "CssStyle": "NormalB",
+        "ParentReportNormID": 4375,
+        "CalculatedOrdering": 2
+      },
+      {
+        "ReportNormId": 4312,
+        "ReportNormName": "III. Tiền, vàng gửi tại các TCTD khác và cho vay các TCTD khác",
+        "CssStyle": "NormalB",
+        "ParentReportNormID": 4375,
+        "CalculatedOrdering": 2
+      },
+      {
+        "ReportNormId": 4344,
+        "ReportNormName": "1. Tiền, vàng gửi tại các TCTD khác",
+        "CssStyle": "Normal",
+        "ParentReportNormID": 4312,
+        "CalculatedOrdering": 3
+      },
+      {
+        "ReportNormId": 4326,
+        "ReportNormName": "2. Cho vay các TCTD khác",
+        "CssStyle": "Normal",
+        "ParentReportNormID": 4312,
+        "CalculatedOrdering": 3
+      },
+      {
+        "ReportNormId": 4345,
+        "ReportNormName": "3. Dự phòng rủi ro cho vay các TCTD khác ",
+        "CssStyle": "Normal",
+        "ParentReportNormID": 4312,
+        "CalculatedOrdering": 3
+      },
+      {
+        "ReportNormId": 4313,
+        "ReportNormName": "IV. Chứng khoán kinh doanh",
+        "CssStyle": "NormalB",
+        "ParentReportNormID": 4375,
+        "CalculatedOrdering": 2
+      },
+      {
+        "ReportNormId": 4346,
+        "ReportNormName": "1. Chứng khoán kinh doanh ",
+        "CssStyle": "Normal",
+        "ParentReportNormID": 4313,
+        "CalculatedOrdering": 3
+      },
+      {
+        "ReportNormId": 4347,
+        "ReportNormName": "2. Dự phòng giảm giá chứng khoán kinh doanh ",
+        "CssStyle": "Normal",
+        "ParentReportNormID": 4313,
+        "CalculatedOrdering": 3
+      },
+      {
+        "ReportNormId": 4314,
+        "ReportNormName": "V. Các công cụ tài chính phái sinh và các tài sản tài chính khác",
+        "CssStyle": "NormalB",
+        "ParentReportNormID": 4375,
+        "CalculatedOrdering": 2
+      },
+      {
+        "ReportNormId": 4315,
+        "ReportNormName": "VI. Cho vay khách hàng",
+        "CssStyle": "NormalB",
+        "ParentReportNormID": 4375,
+        "CalculatedOrdering": 2
+      },
+      {
+        "ReportNormId": 4348,
+        "ReportNormName": "1. Cho vay và cho thuê tài chính khách hàng",
+        "CssStyle": "Normal",
+        "ParentReportNormID": 4315,
+        "CalculatedOrdering": 3
+      },
+      {
+        "ReportNormId": 4349,
+        "ReportNormName": "2. Dự phòng rủi ro cho vay và cho thuê tài chính khách hàng ",
+        "CssStyle": "Normal",
+        "ParentReportNormID": 4315,
+        "CalculatedOrdering": 3
+      },
+      {
+        "ReportNormId": 5322,
+        "ReportNormName": "VII. Hoạt động mua nợ",
+        "CssStyle": "NormalB",
+        "ParentReportNormID": 4375,
+        "CalculatedOrdering": 2
+      },
+      {
+        "ReportNormId": 5323,
+        "ReportNormName": "1. Mua nợ",
+        "CssStyle": "Normal",
+        "ParentReportNormID": 5322,
+        "CalculatedOrdering": 3
+      },
+      {
+        "ReportNormId": 5324,
+        "ReportNormName": "2. Dự phòng rủi ro hoạt động mua nợ",
+        "CssStyle": "Normal",
+        "ParentReportNormID": 5322,
+        "CalculatedOrdering": 3
+      },
+      {
+        "ReportNormId": 4316,
+        "ReportNormName": "VII. Chứng khoán đầu tư",
+        "CssStyle": "NormalB",
+        "ParentReportNormID": 4375,
+        "CalculatedOrdering": 2
+      },
+      {
+        "ReportNormId": 4350,
+        "ReportNormName": "1. Chứng khoán đầu tư sẵn sàng để bán",
+        "CssStyle": "Normal",
+        "ParentReportNormID": 4316,
+        "CalculatedOrdering": 3
+      },
+      {
+        "ReportNormId": 4351,
+        "ReportNormName": "2. Chứng khoán đầu tư giữ đến ngày đáo hạn",
+        "CssStyle": "Normal",
+        "ParentReportNormID": 4316,
+        "CalculatedOrdering": 3
+      },
+      {
+        "ReportNormId": 4352,
+        "ReportNormName": "3. Dự phòng giảm giá chứng khoán đầu tư ",
+        "CssStyle": "Normal",
+        "ParentReportNormID": 4316,
+        "CalculatedOrdering": 3
+      },
+      {
+        "ReportNormId": 4317,
+        "ReportNormName": "VIII. Góp vốn, đầu tư dài hạn",
+        "CssStyle": "NormalB",
+        "ParentReportNormID": 4375,
+        "CalculatedOrdering": 2
+      },
+      {
+        "ReportNormId": 4333,
+        "ReportNormName": "1. Đầu tư vào công ty con",
+        "CssStyle": "Normal",
+        "ParentReportNormID": 4317,
+        "CalculatedOrdering": 3
+      },
+      {
+        "ReportNormId": 4354,
+        "ReportNormName": "2. Đầu tư vào công ty liên doanh, liên kết",
+        "CssStyle": "Normal",
+        "ParentReportNormID": 4317,
+        "CalculatedOrdering": 3
+      },
+      {
+        "ReportNormId": 4334,
+        "ReportNormName": "3. Đầu tư dài hạn khác",
+        "CssStyle": "Normal",
+        "ParentReportNormID": 4317,
+        "CalculatedOrdering": 3
+      },
+      {
+        "ReportNormId": 4355,
+        "ReportNormName": "4. Dự phòng giảm giá đầu tư dài hạn ",
+        "CssStyle": "Normal",
+        "ParentReportNormID": 4317,
+        "CalculatedOrdering": 3
+      },
+      {
+        "ReportNormId": 4307,
+        "ReportNormName": "IX. Tài sản cố định",
+        "CssStyle": "NormalB",
+        "ParentReportNormID": 4375,
+        "CalculatedOrdering": 2
+      },
+      {
+        "ReportNormId": 4328,
+        "ReportNormName": "1. Tài sản cố định hữu hình ",
+        "CssStyle": "NormalB",
+        "ParentReportNormID": 4307,
+        "CalculatedOrdering": 3
+      },
+      {
+        "ReportNormId": 4367,
+        "ReportNormName": "a. Nguyên giá TSCĐ",
+        "CssStyle": "Normal",
+        "ParentReportNormID": 4328,
+        "CalculatedOrdering": 4
+      },
+      {
+        "ReportNormId": 4368,
+        "ReportNormName": "b. Hao mòn TSCĐ ",
+        "CssStyle": "Normal",
+        "ParentReportNormID": 4328,
+        "CalculatedOrdering": 4
+      },
+      {
+        "ReportNormId": 4329,
+        "ReportNormName": "2. Tài sản cố định thuê tài chính",
+        "CssStyle": "NormalB",
+        "ParentReportNormID": 4307,
+        "CalculatedOrdering": 3
+      },
+      {
+        "ReportNormId": 4369,
+        "ReportNormName": "a. Nguyên giá TSCĐ",
+        "CssStyle": "Normal",
+        "ParentReportNormID": 4329,
+        "CalculatedOrdering": 4
+      },
+      {
+        "ReportNormId": 4370,
+        "ReportNormName": "b. Hao mòn TSCĐ ",
+        "CssStyle": "Normal",
+        "ParentReportNormID": 4329,
+        "CalculatedOrdering": 4
+      },
+      {
+        "ReportNormId": 4330,
+        "ReportNormName": "3. Tài sản cố định vô hình",
+        "CssStyle": "NormalB",
+        "ParentReportNormID": 4307,
+        "CalculatedOrdering": 3
+      },
+      {
+        "ReportNormId": 4371,
+        "ReportNormName": "a. Nguyên giá TSCĐ",
+        "CssStyle": "Normal",
+        "ParentReportNormID": 4330,
+        "CalculatedOrdering": 4
+      },
+      {
+        "ReportNormId": 4372,
+        "ReportNormName": "b. Hao mòn TSCĐ ",
+        "CssStyle": "Normal",
+        "ParentReportNormID": 4330,
+        "CalculatedOrdering": 4
+      },
+      {
+        "ReportNormId": 4308,
+        "ReportNormName": "X. Bất động sản đầu tư",
+        "CssStyle": "NormalB",
+        "ParentReportNormID": 4375,
+        "CalculatedOrdering": 2
+      },
+      {
+        "ReportNormId": 4331,
+        "ReportNormName": "a. Nguyên giá BĐSĐT",
+        "CssStyle": "Normal",
+        "ParentReportNormID": 4308,
+        "CalculatedOrdering": 3
+      },
+      {
+        "ReportNormId": 4332,
+        "ReportNormName": "b. Hao mòn BĐSĐT ",
+        "CssStyle": "Normal",
+        "ParentReportNormID": 4308,
+        "CalculatedOrdering": 3
+      },
+      {
+        "ReportNormId": 4327,
+        "ReportNormName": "XI. Tài sản \"Có\" khác",
+        "CssStyle": "NormalB",
+        "ParentReportNormID": 4375,
+        "CalculatedOrdering": 2
+      },
+      {
+        "ReportNormId": 4356,
+        "ReportNormName": "1. Các khoản phải thu",
+        "CssStyle": "Normal",
+        "ParentReportNormID": 4327,
+        "CalculatedOrdering": 3
+      },
+      {
+        "ReportNormId": 4357,
+        "ReportNormName": "2. Các khoản lãi, phí phải thu",
+        "CssStyle": "Normal",
+        "ParentReportNormID": 4327,
+        "CalculatedOrdering": 3
+      },
+      {
+        "ReportNormId": 4335,
+        "ReportNormName": "3. Tài sản thuế TNDN hoãn lại",
+        "CssStyle": "Normal",
+        "ParentReportNormID": 4327,
+        "CalculatedOrdering": 3
+      },
+      {
+        "ReportNormId": 4366,
+        "ReportNormName": "4. Tài sản Có khác",
+        "CssStyle": "Normal",
+        "ParentReportNormID": 4327,
+        "CalculatedOrdering": 3
+      },
+      {
+        "ReportNormId": 4309,
+        "ReportNormName": "   - Trong đó: Lợi thế thương mại",
+        "CssStyle": "NormalBI",
+        "ParentReportNormID": 4309,
+        "CalculatedOrdering": 0
+      },
+      {
+        "ReportNormId": 4358,
+        "ReportNormName": "5. Các khoản dự phòng rủi ro cho các tài sản Có nội bảng khác ",
+        "CssStyle": "Normal",
+        "ParentReportNormID": 4327,
+        "CalculatedOrdering": 3
+      },
+      {
+        "ReportNormId": 4375,
+        "ReportNormName": "TỔNG CỘNG TÀI SẢN",
+        "CssStyle": "LargeB",
+        "ParentReportNormID": 4375,
+        "CalculatedOrdering": 1
+      },
+      {
+        "ReportNormId": 4303,
+        "ReportNormName": "B. NỢ PHẢI TRẢ VÀ VỐN CHỦ SỞ HỮU",
+        "CssStyle": "MaxB",
+        "ParentReportNormID": 4303,
+        "CalculatedOrdering": 0
+      },
+      {
+        "ReportNormId": 4318,
+        "ReportNormName": "I. Các khoản nợ Chính phủ và NHNN",
+        "CssStyle": "NormalB",
+        "ParentReportNormID": 4304,
+        "CalculatedOrdering": 3
+      },
+      {
+        "ReportNormId": 4319,
+        "ReportNormName": "II. Tiền gửi và vay các TCTD khác",
+        "CssStyle": "NormalB",
+        "ParentReportNormID": 4304,
+        "CalculatedOrdering": 3
+      },
+      {
+        "ReportNormId": 4359,
+        "ReportNormName": "1. Tiền gửi của các TCTD khác",
+        "CssStyle": "Normal",
+        "ParentReportNormID": 4319,
+        "CalculatedOrdering": 4
+      },
+      {
+        "ReportNormId": 4360,
+        "ReportNormName": "2. Vay các TCTD khác",
+        "CssStyle": "Normal",
+        "ParentReportNormID": 4319,
+        "CalculatedOrdering": 4
+      },
+      {
+        "ReportNormId": 4320,
+        "ReportNormName": "III. Tiền gửi của khách hàng",
+        "CssStyle": "NormalB",
+        "ParentReportNormID": 4304,
+        "CalculatedOrdering": 3
+      },
+      {
+        "ReportNormId": 4321,
+        "ReportNormName": "IV. Các công cụ tài chính phái sinh và các khoản nợ tài chính khác",
+        "CssStyle": "NormalB",
+        "ParentReportNormID": 4304,
+        "CalculatedOrdering": 3
+      },
+      {
+        "ReportNormId": 4322,
+        "ReportNormName": "V. Vốn tài trợ, ủy thác đầu tư, cho vay mà TCTD chịu rủi ro",
+        "CssStyle": "NormalB",
+        "ParentReportNormID": 4304,
+        "CalculatedOrdering": 3
+      },
+      {
+        "ReportNormId": 4323,
+        "ReportNormName": "VI. Phát hành giấy tờ có giá",
+        "CssStyle": "NormalB",
+        "ParentReportNormID": 4304,
+        "CalculatedOrdering": 3
+      },
+      {
+        "ReportNormId": 4324,
+        "ReportNormName": "VII. Các khoản nợ khác",
+        "CssStyle": "NormalB",
+        "ParentReportNormID": 4304,
+        "CalculatedOrdering": 3
+      },
+      {
+        "ReportNormId": 4361,
+        "ReportNormName": "1. Các khoản lãi, phí phải trả",
+        "CssStyle": "Normal",
+        "ParentReportNormID": 4324,
+        "CalculatedOrdering": 4
+      },
+      {
+        "ReportNormId": 4336,
+        "ReportNormName": "2. Thuế TNDN hoãn lại phải trả ",
+        "CssStyle": "Normal",
+        "ParentReportNormID": 4324,
+        "CalculatedOrdering": 4
+      },
+      {
+        "ReportNormId": 4362,
+        "ReportNormName": "3. Các khoản phải trả và công nợ khác",
+        "CssStyle": "Normal",
+        "ParentReportNormID": 4324,
+        "CalculatedOrdering": 4
+      },
+      {
+        "ReportNormId": 4363,
+        "ReportNormName": "4. Dự phòng rủi ro khác (Dự phòng cho công nợ tiềm ẩn và cam kết ngoại bảng)",
+        "CssStyle": "Normal",
+        "ParentReportNormID": 4324,
+        "CalculatedOrdering": 4
+      },
+      {
+        "ReportNormId": 4304,
+        "ReportNormName": "TỔNG NỢ PHẢI TRẢ",
+        "CssStyle": "LargeB",
+        "ParentReportNormID": 4305,
+        "CalculatedOrdering": 2
+      },
+      {
+        "ReportNormId": 4325,
+        "ReportNormName": "VIII. Vốn và các quỹ",
+        "CssStyle": "NormalB",
+        "ParentReportNormID": 4305,
+        "CalculatedOrdering": 2
+      },
+      {
+        "ReportNormId": 4364,
+        "ReportNormName": "1. Vốn của TCTD",
+        "CssStyle": "NormalB",
+        "ParentReportNormID": 4325,
+        "CalculatedOrdering": 3
+      },
+      {
+        "ReportNormId": 4337,
+        "ReportNormName": "a. Vốn điều lệ",
+        "CssStyle": "Normal",
+        "ParentReportNormID": 4364,
+        "CalculatedOrdering": 4
+      },
+      {
+        "ReportNormId": 4373,
+        "ReportNormName": "b. Vốn đầu tư XDCB",
+        "CssStyle": "Normal",
+        "ParentReportNormID": 4364,
+        "CalculatedOrdering": 4
+      },
+      {
+        "ReportNormId": 4338,
+        "ReportNormName": "c. Thặng dư vốn cổ phần",
+        "CssStyle": "Normal",
+        "ParentReportNormID": 4364,
+        "CalculatedOrdering": 4
+      },
+      {
+        "ReportNormId": 4340,
+        "ReportNormName": "d. Cổ phiếu quỹ ",
+        "CssStyle": "Normal",
+        "ParentReportNormID": 4364,
+        "CalculatedOrdering": 4
+      },
+      {
+        "ReportNormId": 4374,
+        "ReportNormName": "e. Cổ phiếu ưu đãi",
+        "CssStyle": "Normal",
+        "ParentReportNormID": 4364,
+        "CalculatedOrdering": 4
+      },
+      {
+        "ReportNormId": 4339,
+        "ReportNormName": "g. Vốn khác",
+        "CssStyle": "Normal",
+        "ParentReportNormID": 4364,
+        "CalculatedOrdering": 4
+      },
+      {
+        "ReportNormId": 4365,
+        "ReportNormName": "2. Quỹ của TCTD",
+        "CssStyle": "NormalB",
+        "ParentReportNormID": 4364,
+        "CalculatedOrdering": 3
+      },
+      {
+        "ReportNormId": 4342,
+        "ReportNormName": "3. Chênh lệch tỷ giá hối đoái ",
+        "CssStyle": "NormalB",
+        "ParentReportNormID": 4325,
+        "CalculatedOrdering": 3
+      },
+      {
+        "ReportNormId": 4341,
+        "ReportNormName": "4. Chênh lệch đánh giá lại tài sản",
+        "CssStyle": "NormalB",
+        "ParentReportNormID": 4325,
+        "CalculatedOrdering": 3
+      },
+      {
+        "ReportNormId": 4343,
+        "ReportNormName": "5. Lợi nhuận chưa phân phối/Lỗ lũy kế ",
+        "CssStyle": "NormalB",
+        "ParentReportNormID": 4325,
+        "CalculatedOrdering": 3
+      },
+      {
+        "ReportNormId": 5699,
+        "ReportNormName": "6. Lợi ích cổ đông không kiểm soát",
+        "CssStyle": "NormalB",
+        "ParentReportNormID": 4325,
+        "CalculatedOrdering": 3
+      },
+      {
+        "ReportNormId": 4306,
+        "ReportNormName": "IX. Lợi ích của cổ đông thiểu số",
+        "CssStyle": "NormalB",
+        "ParentReportNormID": 4305,
+        "CalculatedOrdering": 2
+      },
+      {
+        "ReportNormId": 4305,
+        "ReportNormName": "TỔNG NỢ PHẢI TRẢ VÀ VỐN CHỦ SỞ HỮU",
+        "CssStyle": "LargeB",
+        "ParentReportNormID": 4305,
+        "CalculatedOrdering": 1
+      }
+    ]
+  }

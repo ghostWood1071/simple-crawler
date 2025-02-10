@@ -4,3 +4,5 @@ bin/
 include/
 __pycache__/
 .venv/
+simple_crawler.*
+python/

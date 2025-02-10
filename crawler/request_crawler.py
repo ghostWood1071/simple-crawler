@@ -11,15 +11,22 @@ from transform.transform import Transform
 class RequestCrawler():
     def __init__(self, pipeline):
         self.pipeline = pipeline
+        self.api_params = ["params", "headers", "data"]
 
-    def get(self, input_val ,**kwargs):
+    def call_api(self, input_val ,**kwargs):
         try:
-            params = data_util.format_params(kwargs.get("params"), kwargs)
-            response = requests.get(
+            api_params_dict = {}
+            for api_param in self.api_params:
+                if kwargs.get(api_param):
+                    api_params_dict[api_param] = data_util.format_params(kwargs.get(api_param), kwargs)
+                else:
+                    api_params_dict[api_param] = None
+            method = kwargs.get("method")
+            response = getattr(requests, method)(
                 kwargs.get("url"), 
-                params=params, 
-                headers=kwargs.get("headers"), 
-                data=kwargs.get("data"), 
+                params=api_params_dict["params"], 
+                headers=api_params_dict["headers"], 
+                data=api_params_dict["data"], 
                 cookies=kwargs.get("cookies")
             )
             if kwargs.get("format"):
@@ -44,7 +51,10 @@ class RequestCrawler():
         Sink(kwargs.get("type"), input_val, **kwargs).clear()
     
     def transform(self, input_val, **kwargs):
-        return Transform(input_val, **kwargs).process()
+        try: 
+            return Transform(input_val, **kwargs).process()
+        except PageEndError as e:
+            raise e
 
     def foreach(self, input_val, **kwargs):
         iterator = []
@@ -67,6 +77,9 @@ class RequestCrawler():
                 try:
                     params = action["params"]
                     params["item"] = item
+                    if isinstance(tmp_val, dict):
+                        if action["params"].get("set_prev_result_as_params"):
+                            params.update(tmp_val)
                     if kwargs.get("cond"):
                         if kwargs["cond"]["action"] == action.get("name"):
                             params["cond"] = kwargs["cond"]
